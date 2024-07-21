@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-checkbox {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #d1d5db; /* Grey border */
+  border-radius: 0.25rem;
+  background-color: #d1d5db; /* Grey background */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-checkbox:checked {
+  background-color: #000000;
+  border-color: #000000; /* Black border when checked */
+  position: relative;
+}
+
+.custom-checkbox:checked::after {
+  /* content: ''; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  /* background-color: white; White checkmark */
+  /* transform: translate(-50%, -50%) rotate(45deg); */
+  /* border: solid white; */
+  border-width: 0 2px 2px 0;
+}
